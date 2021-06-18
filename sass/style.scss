@@ -1,0 +1,105 @@
+$color-main: #3F51B5;
+$color-accent: #E81919;
+$color-text: #333333;
+$layout-width-inner: 1200px;
+
+//ブレークポイント
+$breakpoints: (
+  'sp': '(max-width: 767px)', //767px以下（スマホ）用の表示
+  'tab': '(min-width: 768px) and (max-width: #{$layout-width-inner})',//767px以下かつ$layout-width-inner以下
+  'pc': '(min-width: #{$layout-width-inner})', //$layout-width-inner以上（タブレット・PC）用の表示
+) ;
+
+//メディアクエリ
+@mixin mq($breakpoint: sp) {
+      @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+      }
+}
+
+
+.inner {
+    width: $layout-width-inner;
+    max-width: 100%;
+    margin: 0 auto;
+  
+    @include mq('tab') {
+      margin-right: 24px;
+      margin-left: 24px;
+      width: auto;
+    }
+  
+    @include mq('sp') {
+      margin-right: 16px;
+      margin-left: 16px;
+      width: auto;
+    }
+}
+
+.header {
+    background: #FFFFFF;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 3px 3px rgba(#000,0.16);
+    z-index: 100;
+    top: 0;
+    left: 0;
+  
+    @include mq('sp') {
+      height: 60px;
+    }
+}
+  
+  .header__inner {
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+  
+  .header__logo {
+    width: 205px;
+  
+    @include mq('sp') {
+      width: 182px;
+    }
+  
+    img {
+      display: block;
+    }
+}
+  
+  .header__nav {
+    display:flex;
+    align-items: center;
+    margin-left: auto;
+  
+    @include mq('sp') {
+      display: none;
+    }
+  
+    li {
+      &:not(:first-child) { //一番最初の要素だけ適用しない
+        margin-left: 40px;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        
+        
+  
+        &.is-active {
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $color-accent;
+          }
+        }
+      }
+    }
+}
