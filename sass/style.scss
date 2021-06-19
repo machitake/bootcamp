@@ -1,7 +1,7 @@
 $color-main: #3F51B5;
 $color-accent: #E81919;
 $color-text: #333333;
-$layout-width-inner: 1200px;
+$layout-width-inner: 1700px;
 
 //ブレークポイント
 $breakpoints: (
@@ -18,30 +18,30 @@ $breakpoints: (
 }
 
 
-.inner {
-    width: $layout-width-inner;
-    max-width: 100%;
-    margin: 0 auto;
+// .inner {
+//     width: $layout-width-inner;
+//     max-width: 100%;
+//     margin: 0 auto;
   
-    @include mq('tab') {
-      margin-right: 24px;
-      margin-left: 24px;
-      width: auto;
-    }
+//     @include mq('tab') {
+//       margin-right: 24px;
+//       margin-left: 24px;
+//       width: auto;
+//     }
   
-    @include mq('sp') {
-      margin-right: 16px;
-      margin-left: 16px;
-      width: auto;
-    }
-}
+//     @include mq('sp') {
+//       margin-right: 16px;
+//       margin-left: 16px;
+//       width: auto;
+//     }
+// }
 
 .header {
     background: #FFFFFF;
     height: 100px;
     position: fixed;
     width: 100%;
-    box-shadow: 0 3px 3px rgba(#000,0.16);
+    // box-shadow: 0 3px 3px rgba(#000,0.16);
     z-index: 100;
     top: 0;
     left: 0;
@@ -55,6 +55,13 @@ $breakpoints: (
     display: flex;
     align-items: center;
     height: inherit;
+    width: 1700px;
+    max-width: 100%;
+    padding: 0 50px;
+    
+    @include mq('sp') {
+      padding: 0 10px;
+    }
 }
   
   .header__logo {
@@ -79,27 +86,78 @@ $breakpoints: (
     }
   
     li {
-      &:not(:first-child) { //一番最初の要素だけ適用しない
-        margin-left: 40px;
-      }
+      // &:not(:first-child) { //一番最初の要素だけ適用しない
+      //   margin-left: 40px;
+      // }
+
+      // height: 100px;
+      // line-height: 100px;
+
+     
+
       a {
-        color: #fff;
-        text-decoration: none;
-        position: relative;
-        
-        
-  
-        &.is-active {
-          &::after {
-            content: "";
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: $color-accent;
-          }
+        color: #008B5B;
+        display: inline-block;
+        padding: 38px 20px;
+
+        &:hover {
+          background: #008B5B;
+          color: #fff;
         }
+        
       }
     }
+}
+
+
+
+//main
+
+.main {
+  padding: 0 50px;
+  
+    @include mq('sp') {
+      padding: 0 10px;
+    }
+    
+}
+
+
+.main-visual {
+  height: 600px;
+  max-height: 100%;
+  width: 1700px;
+  max-width: 100%;
+  background: url(../img/main_dummy_photo.png) center center / cover no-repeat;
+  position: relative;
+  margin-top: 100px;
+
+    @include mq('sp') {
+      margin-top: 50px;
+      height: 350px;
+    }
+} 
+
+.catch_copy {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+
+    @include mq('sp') {
+      bottom: 3px;
+      left: 3px;
+    }
+
+  p {
+    display: inline-block;
+    font-size: 24px;
+    background: #fff;
+    margin: 0;
+    padding: 4px 18px;
+    margin-top: 5px;
+
+      @include mq('sp') {
+        font-size: 8px;
+      }
+  }
 }
