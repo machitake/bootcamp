@@ -194,11 +194,22 @@ transition: transform .3s;
 }      
 .nav-item{        
   margin-right: 0;        
-  margin-bottom: 40px;   
+  margin-bottom: 15px;   
   
   a {
+    display: inline-block;
+    width: 230px;
+    padding: 18px 0;
     color: $color-main;
+
+    &:hover {
+      
+      background: $color-main;
+      color: #fff;
+    }
   }
+
+
   
 }
 
@@ -251,4 +262,54 @@ transition: transform .3s;
         font-size: 8px;
       }
   }
+}
+
+//introduction
+
+.introduction {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  max-width: 100%;
+  height: 300px;
+  background: url(../img/dummy1.png)no-repeat; 
+  background-size: 600px;
+  background-position: right top;
+  
+    @include mq('sp') {
+      max-width: 95%;
+      margin: 30px auto;
+      background-size: 400px;
+    }
+}
+
+.introduction_text {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  margin-left: calc(100% - 300px);
+  padding-top: 50px;
+
+    @include mq('sp') {
+      margin-left: 0;
+      padding-top: 200px;
+    }
+
+  h2 {
+    display: inline-block;
+    background: #fff;
+    padding-bottom: 10px;
+
+    @include mq('sp') {
+      font-size: 18px;
+    }
+  }
+  p {
+    background: #fff;
+    margin: 0;
+
+      @include mq('sp') {
+        font-size: 14px;
+      }
+  }
+  
 }
