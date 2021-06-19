@@ -25,6 +25,7 @@
   width: 1700px;
   max-width: 100%;
   padding: 0 50px;
+  position: relative;
 }
 
 @media (max-width: 767px) {
@@ -72,6 +73,112 @@
 .header__nav li a:hover {
   background: #008B5B;
   color: #fff;
+}
+
+.burger {
+  position: absolute;
+  right: 0;
+}
+
+.burger-btn {
+  display: block;
+  width: 39px;
+  height: 39px;
+  position: relative;
+  z-index: 3;
+  border: none;
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .burger-btn {
+    display: block;
+  }
+}
+
+.bar {
+  width: 20px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #008B5B;
+}
+
+.bar_top {
+  top: 10px;
+}
+
+.bar_mid {
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.bar_bottom {
+  bottom: 10px;
+}
+
+.burger-btn.close .bar_top {
+  -webkit-transform: translate(-50%, 9px) rotate(45deg);
+          transform: translate(-50%, 9px) rotate(45deg);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.burger-btn.close .bar_mid {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.burger-btn.close .bar_bottom {
+  -webkit-transform: translate(-50%, -7px) rotate(-45deg);
+          transform: translate(-50%, -7px) rotate(-45deg);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.nav-wrapper {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.header-nav {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.nav-list {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.nav-item {
+  margin-right: 0;
+  margin-bottom: 40px;
+}
+
+.nav-item a {
+  color: #008B5B;
 }
 
 .main {
