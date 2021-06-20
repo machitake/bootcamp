@@ -36,6 +36,10 @@ $breakpoints: (
 //     }
 // }
 
+.noscroll{
+  overflow: hidden;//スクロールさせない
+}
+
 .header {
     background: #FFFFFF;
     height: 100px;
