@@ -283,6 +283,7 @@ transition: transform .3s;
     @include mq('sp') {
       max-width: 95%;
       margin: 30px auto;
+      margin-bottom: 150px;
       background-size: 400px;
     }
 }
@@ -327,29 +328,66 @@ transition: transform .3s;
 
 .about {
   background: $color-main;
-  padding-top: 40px;
+  padding-top: 80px;
+  height: auto;
+  padding-bottom: 80px;
+
+    @include mq('sp') {
+      padding-top: 50px;
+    }
 }
 
 .section_inner{
   width: 1000px;
   max-width: 100%;
-  height: 1000px;
   margin: 0 auto;
   position: relative;
   display: flex;
+
+    @include mq('sp') {
+      display: block;
+    }
 }
 
 .about_left {
   width: 60%;
+  position: relative;
   img {
     display: block;
     width: 380px;
     height: 266px;
+
+      @include mq('sp') {
+        width: 235px;
+        height: 164px;
+      }
+  }
+
+  @include mq('sp') {
+    width: 100%;
+    padding: 0 20px;
+
+  }
+}
+
+.about-title{
+  position: absolute;
+  right: 50px;
+  top: 6px;
+  font-size: 32px;
+  color: #fff;
+  font-family: Oswald;
+
+  @include mq('sp') {
+    top: initial;//初期値に戻す
+    right: initial;
+    bottom: -70px;
+    left: 20px;
   }
 }
 
 .about_img2 {
-  margin-left: 200px;
+  margin-left: 100px;
   margin-top: -50px;
 }
 
@@ -364,4 +402,16 @@ transition: transform .3s;
 .about_text {
   font-size: 18px;
   margin: 0;
+}
+
+
+.about-right {
+  
+  width: 40%;
+
+  @include mq('sp') {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 70px;
+  }
 }
