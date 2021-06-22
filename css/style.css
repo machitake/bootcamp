@@ -329,6 +329,9 @@
   width: 1000px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+.about_inner {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,7 +339,7 @@
 }
 
 @media (max-width: 767px) {
-  .section_inner {
+  .about_inner {
     display: block;
   }
 }
@@ -412,4 +415,130 @@
     padding: 0 20px;
     margin-top: 70px;
   }
+}
+
+.card {
+  background: #fff;
+  padding-bottom: 120px;
+}
+
+@media (max-width: 767px) {
+  .card {
+    padding: 0 20px 0 20px;
+  }
+}
+
+.card_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  margin-top: 80px;
+  margin-bottom: 107px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .card_top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .order1 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .order2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .order3 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+.card_top-title {
+  width: 130px;
+  font-size: 32px;
+  color: #333;
+  font-family: Oswald;
+}
+
+@media (max-width: 767px) {
+  .card_top-title {
+    width: 100%;
+    margin: 30px 0 20px;
+  }
+}
+
+.card_top-text {
+  width: calc(100% - 400px - 130px - 50px);
+}
+
+@media (max-width: 767px) {
+  .card_top-text {
+    width: 100%;
+  }
+}
+
+.card_top-img {
+  width: 400px;
+}
+
+@media (max-width: 767px) {
+  .card_top-img {
+    width: 100%;
+  }
+}
+
+.card_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  width: 1000px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.card_bottom::after {
+  content: "";
+  position: absolute;
+  background: url(../img/layer1.png) no-repeat;
+  width: 18px;
+  height: 33px;
+  left: -30px;
+  top: 70px;
+}
+
+.card_bottom::before {
+  content: "";
+  position: absolute;
+  background: url(../img/layer2.png) no-repeat;
+  width: 18px;
+  height: 33px;
+  right: -30px;
+  top: 70px;
+}
+
+.card_bottom-item {
+  width: 24%;
+}
+
+.card_bottom-item h3 {
+  margin-top: 25px;
 }
