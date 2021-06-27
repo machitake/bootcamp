@@ -17,8 +17,8 @@
     dots:true,
     slidesToShow:3, //表示するスライドの数
     //slidesToScroll:2, //１度にスクロールする数
-    // prevArrow: '<img src="./img/layer1.png" class="slide-arrow prev-arrow">',
-    // nextArrow: '<img src="./img/layer2.png" class="slide-arrow next-arrow">',
+    prevArrow: '<img src="./img/layer1.png" class="slide-arrow prev-arrow">',
+    nextArrow: '<img src="./img/layer2.png" class="slide-arrow next-arrow">',
 
     responsive:[
       {

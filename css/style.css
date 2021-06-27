@@ -524,9 +524,30 @@
   position: relative;
 }
 
-.slider img {
-  height: auto;
+.card_bottom-item img {
   width: 100%;
+}
+
+.prev-arrow {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 10px;
+  width: 18px;
+  height: 33px;
+}
+
+.next-arrow {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 10px;
+  width: 18px;
+  height: 33px;
 }
 
 /*slick setting*/

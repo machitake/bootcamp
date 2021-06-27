@@ -545,23 +545,33 @@ transition: transform .3s;
   position: relative;
 }
 
-// .prev-arrow{
-//   position: absolute;
-//   left: -10px;
-//   top: 50%;
-//   transform: translateY(-50%);
-// }
-// .next-arrow{
-//   position: absolute;
-//   right: 10px;
-//   top: 50%;
-//   transform: translateY(-50%);
-// }
-
-.slider img{
-  height: auto;
-  width: 100%;
+.card_bottom-item {
+  img {
+    width: 100%;
+  }
 }
+
+
+.prev-arrow{
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  width: 18px;
+  height: 33px;
+}
+.next-arrow{
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  width: 18px;
+  height: 33px;
+}
+
+
 /*slick setting*/
 .slick-prev:before,
 .slick-next:before {
