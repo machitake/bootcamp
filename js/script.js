@@ -12,8 +12,8 @@
   //スライダー
 
   $('.slider').slick({
-    autoplay:true,
-    autoplaySpeed:5000,
+    // autoplay:true,
+    // autoplaySpeed:5000,
     dots:true,
     slidesToShow:3, //表示するスライドの数
     //slidesToScroll:2, //１度にスクロールする数
